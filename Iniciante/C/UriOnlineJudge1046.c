@@ -2,7 +2,7 @@
 
 int main(){
 
-        int duracao = 0;;
+        int duracao = 0;
         int horaInicial = 0, horaFinal = 0;
 
        scanf("%d %d",&horaInicial,&horaFinal);
