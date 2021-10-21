@@ -1,30 +1,44 @@
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 
 using namespace std;
 
+void somaImpar(int x, int y);
 
 int main(){
 
-    int n,a,b,c;
-    cin>>n;
+       int n = 0, i;
+       cin>>n;
+       int x=0, y=0;
 
-    for (int i=0; i<n; i++){
-        c=0;
-        cin>>a>>b;
+        for (i = 0; i < n; i++) {
+            int aux = 0;
 
-        if (a>b){
-            a+=b;
-            b=a-b;
-            a-=b;
+            cin>>x>>y;
+
+            if (x > y) {
+                aux = y;
+                y = x;
+                x = aux;
+            }
+            somaImpar(x, y);
         }
-
-        for (int k=a+1; k<b; k++){
-            if (k%2==1) c+=k;
-        }
-        cout<<c<<endl;
-    }
-    return 0;
+        return 0;
 }
+
+void somaImpar(int x, int y) {
+        x = x+1;
+        int soma = 0,i;
+        for (i = x; i < y; i++) {
+            if (i % 2 != 0) {
+                soma+=i;
+            }
+        }
+          cout<<soma<<endl;
+}
+
+
 
 
 
