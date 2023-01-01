@@ -51,13 +51,10 @@ Inter venceu mais
 public class UriOnlineJudge1131 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int answer = 0;
-        int inter = 0;
-        int gremio = 0;
-        int grenais = 0;
-        int empate = 0;
-        int VitoriaInter = 0;
-        int VitoriaGremio = 0;
+
+        int answer = 0, inter = 0, gremio = 0,
+                grenais = 0, empate = 0,
+                VitoriaInter = 0, VitoriaGremio = 0;
 
         do {
             inter = sc.nextInt();
@@ -71,13 +68,9 @@ public class UriOnlineJudge1131 {
             answer = sc.nextInt();
 
             if (answer == 2) {
-                String vencedor = "";
 
-                if (VitoriaGremio == VitoriaInter) {
-                    vencedor = "Ninguém";
-                } else {
-                    vencedor = (VitoriaInter > VitoriaGremio) ? "Inter" : "Gremio";
-                }
+                String vencedor = (VitoriaInter > VitoriaGremio) ? "Inter" : "Gremio";
+
                 System.out.println(grenais + " grenais" + "\n" +
                         "Inter:" + VitoriaInter + "\n" +
                         "Gremio:" + VitoriaGremio + "\n" +
@@ -87,7 +80,6 @@ public class UriOnlineJudge1131 {
 
             }
         } while (answer == 1);
-
 
     }
 }
