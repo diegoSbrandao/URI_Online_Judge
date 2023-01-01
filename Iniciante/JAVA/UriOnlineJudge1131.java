@@ -54,14 +54,14 @@ public class UriOnlineJudge1131 {
 
         int answer = 0, inter = 0, gremio = 0,
                 grenais = 0, empate = 0,
-                VitoriaInter = 0, VitoriaGremio = 0;
+                vitoriaInter = 0, vitoriaGremio = 0;
 
         do {
             inter = sc.nextInt();
             gremio = sc.nextInt();
             grenais++;
-            VitoriaInter += (inter > gremio) ? 1 : 0;
-            VitoriaGremio += (inter < gremio) ? 1 : 0;
+            vitoriaInter += (inter > gremio) ? 1 : 0;
+            vitoriaGremio += (inter < gremio) ? 1 : 0;
             empate += (inter == gremio) ? 1 : 0;
 
             System.out.println("Novo grenal (1-sim 2-nao)");
@@ -69,11 +69,11 @@ public class UriOnlineJudge1131 {
 
             if (answer == 2) {
 
-                String vencedor = (VitoriaInter > VitoriaGremio) ? "Inter" : "Gremio";
+                String vencedor = (vitoriaInter > vitoriaGremio) ? "Inter" : "Gremio";
 
                 System.out.println(grenais + " grenais" + "\n" +
-                        "Inter:" + VitoriaInter + "\n" +
-                        "Gremio:" + VitoriaGremio + "\n" +
+                        "Inter:" + vitoriaInter + "\n" +
+                        "Gremio:" + vitoriaGremio + "\n" +
                         "Empates:" + empate + "\n" +
                         vencedor + " venceu mais"
                 );
