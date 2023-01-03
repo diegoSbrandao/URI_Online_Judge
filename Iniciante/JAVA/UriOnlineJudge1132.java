@@ -27,15 +27,16 @@ public class UriOnlineJudge1132 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int x = 0, y = 0, firstPosition = 0, secondPosition = 0, sum = 0;
+        int x = 0, y = 0, sum = 0;
         x = sc.nextInt();
         y = sc.nextInt();
+        int jokePosition = x;
 
-        firstPosition = (x < y) ? x : y;
-        secondPosition = (firstPosition == y) ? x : y;
+        x = (x > y) ? y : x;
+        y = (x != jokePosition) ? jokePosition : y;
 
-        for (int i = firstPosition; i <= secondPosition; i++) {
-            sum += (i % 13 != 13 && i % 13 != 0) ? i : 0;
+        for (int i = x; i <= y; i++) {
+            sum += (i % 13 != 0) ? i : 0;
         }
 
         System.out.println(sum);
