@@ -29,13 +29,13 @@ Exemplo de Saída
 public class UriOnlineJudge1143 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int number = 0;
+        int n = 0;
 
-        number = sc.nextInt();
-        int a = 1;
+        n = sc.nextInt();
+        float a = 1;
 
-        for (int i = 1; i <= number; i++) {
-            System.out.println((a) + " " + (a*a) + " " + (a*a*a));
+        for (int i = 1; i <= n; i++) {
+            System.out.printf("%.0f %.0f %.0f\n", a, (Math.pow(a, 2)), Math.pow(a, 3));
             a += 1;
         }
     }
